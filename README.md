@@ -1,10 +1,20 @@
 # practice-playwright
 Practicing against: https://the-internet.herokuapp.com/
 
+# Playwright vs Selenium
+
+
 # Playwright TestNG Project
 
 This project is generated from an archetype. It exists out of TestNG, Playwright, Allure and OWNER as the main dependencies.
 
+## Selenium vs Playwright
+
+In Selenium, using the WebDriver protocol, the tests (client) sends HTTP requests to the selenium server (holding the webdriver). 
+The server then sends response back to the client. However, there is a disconnect afterward.
+
+In Playwright, using the WebSocket protocol, it just needs to establish connection once, and there is no disconnect.
+Since there is no disconnection, it is much faster in comparison.
 
 ## Run tests
 

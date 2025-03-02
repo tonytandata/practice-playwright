@@ -36,3 +36,5 @@ build/
 ### Mac OS ###
 .DS_Store
 >>>>>>> e8e936f (Initial commit)
+
+.allure/
