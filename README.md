@@ -16,6 +16,11 @@ The server then sends response back to the client. However, there is a disconnec
 In Playwright, using the WebSocket protocol, it just needs to establish connection once, and there is no disconnect.
 Since there is no disconnection, it is much faster in comparison.
 
+## What is WebSocket protocol?
+Unlike http based protocols, it only needs to make a connection once.
+It enables real-time, two-way communication between a client and a server by establishing a persistent TCP connection,
+where data can be sent and received simultaneously without the need for repeated HTTP requests.
+
 ## Run tests
 
 `mvn clean test`
