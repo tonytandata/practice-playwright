@@ -2,6 +2,7 @@ package org.tonyyjt.testscripts;
 
 import org.tonyyjt.pages.HomePage;
 import org.testng.annotations.Test;
+import org.tonyyjt.steps.HomePageSteps;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -18,5 +19,11 @@ public class ToolshopTest extends TestBase {
         HomePage homePage = new HomePage(getPage())
                 .navigate();
         assertThat(homePage.isSignInButtonDisplayed()).isFalse();
+    }
+
+    public void verifyAnotherTest(){
+        HomePageSteps homePageSteps = new HomePageSteps();
+        homePageSteps.openHomepage();
+        assertThat(1).isEqualTo(1);
     }
 }
