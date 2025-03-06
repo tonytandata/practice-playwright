@@ -10,13 +10,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class ToolshopTest extends TestBase {
 
     public void verifySignInButton() {
-        HomePage homePage = new HomePage(getPage())
+        HomePage homePage = new HomePage()
                 .navigate();
         assertThat(homePage.isSignInButtonDisplayed()).isTrue();
     }
 
     public void verifySignInButton_failOnPurpose() {
-        HomePage homePage = new HomePage(getPage())
+        HomePage homePage = new HomePage()
                 .navigate();
         assertThat(homePage.isSignInButtonDisplayed()).isFalse();
     }

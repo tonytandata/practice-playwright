@@ -2,15 +2,15 @@ package org.tonyyjt.pages;
 
 import org.tonyyjt.properties.Environment;
 import com.microsoft.playwright.Locator;
-import com.microsoft.playwright.Page;
 import io.qameta.allure.Step;
+import org.tonyyjt.testscripts.TestBase;
 
 public class HomePage extends AbstractPageBase {
 
     private final Locator signInButton;
 
-    public HomePage(Page page) {
-        super(page);
+    public HomePage() {
+        super(TestBase.getPage());
         this.signInButton = page.locator("[data-test='nav-sign-in']");
     }
 
