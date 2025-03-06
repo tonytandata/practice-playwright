@@ -6,12 +6,17 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 
 public class ExperimentMain {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         System.out.println("Hello world!");
         Playwright playwright = Playwright.create(); // returns playwright instance
 
 //        Browser browser = playwright.chromium().launch(); // returns a browser, by default is headless. Also downloads browser binaries if first time.
-        Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false)); // head mode
+//        Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false)); // head mode
+
+        BrowserType.LaunchOptions lp = new BrowserType.LaunchOptions();
+        lp.setChannel("chrome");
+        lp.setHeadless(false);
+        Browser browser = playwright.chromium().launch(lp);
 
         Page page = browser.newPage(); // in this browser start a page, this returns a page
         page.navigate("https://candymapper.com/"); // in this page, load url
