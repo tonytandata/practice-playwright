@@ -14,10 +14,15 @@ public class HomePage extends AbstractPageBase {
         this.signInButton = page.locator("[data-test='nav-sign-in']");
     }
 
-    @Step("Open the Practice Software Testing homepage")
+    @Step("Open the Candy mapper homepage")
     public HomePage navigate() {
         page.navigate(Environment.getProperties().url());
         return this;
+    }
+
+    @Step("Closes popup")
+    public void closePopup() {
+        page.locator("#popup-widget25042-close-icon").click();
     }
 
     @Step("Is Sign In button displayed")
