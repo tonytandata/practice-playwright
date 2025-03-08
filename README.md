@@ -21,6 +21,12 @@ Unlike http based protocols, it only needs to make a connection once.
 It enables real-time, two-way communication between a client and a server by establishing a persistent TCP connection,
 where data can be sent and received simultaneously without the need for repeated HTTP requests.
 
+## Playwright codegen
+Playwright comes with the ability to record and generate code with the locators. 
+When launched it comes with two windows, one with the browser and the other with code generating as you interact with the site.
+To launch, simply enter this maven command:<br>
+```mvn exec:java -e -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="codegen https://candymapper.com"```
+
 ## Run tests
 
 `mvn clean test`
