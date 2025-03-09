@@ -25,7 +25,8 @@ where data can be sent and received simultaneously without the need for repeated
 Playwright comes with the ability to record and generate code with the locators. 
 When launched it comes with two windows, one with the browser and the other with code generating as you interact with the site.
 To launch, simply enter this maven command:<br>
-```mvn exec:java -e -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="codegen https://candymapper.com"```
+```mvn exec:java -e -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="codegen https://candymapper.com"```<br>
+Refer to: https://playwright.dev/java/docs/codegen-intro
 
 ## Run tests
 

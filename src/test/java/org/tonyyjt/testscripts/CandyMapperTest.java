@@ -10,6 +10,15 @@ public class CandyMapperTest extends TestBase{
         homePage.navigate();
         homePage.closePopup();
 
-        //TODO: Continue with filling up contact form and verify for success message
+        homePage.fillContactFormLabel("First Name", "Tony");
+        homePage.fillContactFormLabel("Last Name", "Tester");
+        homePage.fillContactFormLabel("Email*", "tonytandata@gmail.com");
+        homePage.fillContactFormLabel("By entering a Phone Number", "0451548884");
+        homePage.fillContactFormMessage("Tonys test message to contact us form");
+        homePage.clickSubmitContactForm();
+
+        // TODO: Something flaky
+
+        // TODO: Verify success
     }
 }
