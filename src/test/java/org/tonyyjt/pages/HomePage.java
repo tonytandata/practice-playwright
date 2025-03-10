@@ -11,6 +11,7 @@ public class HomePage extends AbstractPageBase {
 
     private final Locator signInButton;
     private final static String CONTACT_FORM_MESSAGE_PLACEHOLDER = "Message";
+    private final static String SUCCESS_TEXT = "Thank you for your inquiry!";
 
     public HomePage() {
         super(TestBase.getPage());
@@ -43,5 +44,9 @@ public class HomePage extends AbstractPageBase {
 
     public void clickSubmitContactForm() {
         page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("submit")).click();
+    }
+
+    public String getSuccessMessage() {
+        return page.getByText(SUCCESS_TEXT).textContent();
     }
 }

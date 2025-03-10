@@ -1,10 +1,7 @@
 # practice-playwright
 Practicing against: https://the-internet.herokuapp.com/
 
-# Playwright vs Selenium
-
-
-# Playwright TestNG Project
+# Playwright, TestNG, Allure Reports Project
 
 This project is generated from an archetype. It exists out of TestNG, Playwright, Allure and OWNER as the main dependencies.
 
