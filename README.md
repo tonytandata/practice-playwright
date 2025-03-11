@@ -25,6 +25,14 @@ To launch, simply enter this maven command:<br>
 ```mvn exec:java -e -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="codegen https://candymapper.com"```<br>
 Refer to: https://playwright.dev/java/docs/codegen-intro
 
+## Playwright inspector
+Another way to access the codegen is via the inspector/debugging feature that playwright provides. 
+
+Put `PWDEBUG=1` as environment variable to debug from the beginning,
+or add in your code `page.pause();`, which will start debugger from that point
+<br>
+Refer to: https://playwright.dev/java/docs/debug
+
 ## Run tests
 
 `mvn clean test`
