@@ -49,4 +49,10 @@ public class HomePage extends AbstractPageBase {
     public String getSuccessMessage() {
         return page.getByText(SUCCESS_TEXT).textContent();
     }
+
+    public void waitForCandyImage() {
+//        String classes = page.locator("//img[contains(@src, 'Candy')]/parent::picture").getAttribute("class");
+//        System.out.println("classes: " + classes);
+        page.locator("//img[contains(@src, 'Candy')]/parent::picture").isVisible();
+    }
 }

@@ -33,6 +33,9 @@ or add in your code `page.pause();`, which will start debugger from that point
 <br>
 Refer to: https://playwright.dev/java/docs/debug
 
+## About auto wait
+https://playwright.dev/java/docs/actionability
+
 ## Run tests
 
 `mvn clean test`
