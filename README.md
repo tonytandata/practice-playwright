@@ -36,6 +36,13 @@ Refer to: https://playwright.dev/java/docs/debug
 ## About auto wait
 https://playwright.dev/java/docs/actionability
 
+## Trace Viewer
+Basically a recorder, but much more powerful than a video recorder, as it records e.g. console, network events, before and after of actions. 
+I can see how this would be really helpful for debugging!
+<br>Added this to BeforeMethod to start and AfterMethod to stop.
+<br>
+https://playwright.dev/java/docs/trace-viewer-intro
+
 ## Run tests
 
 `mvn clean test`
