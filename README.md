@@ -1,5 +1,5 @@
 # practice-playwright
-Practicing against: https://the-internet.herokuapp.com/
+Practicing against: https://candymapper.com/
 
 # Playwright, TestNG, Allure Reports Project
 
@@ -42,6 +42,14 @@ I can see how this would be really helpful for debugging!
 <br>Added this to BeforeMethod to start and AfterMethod to stop.
 <br>
 https://playwright.dev/java/docs/trace-viewer-intro
+
+## About Browser Context
+Browser Context allows to open several instances of the browser.
+It is like different browser profiles, with its own set of cookies and cache.
+This allows for multiple users to login and test their interactions with each other instead having to log out each time.
+E.g.
+- Chatting between different users
+- Users and custodians with different roles on the same platform
 
 ## Run tests
 
