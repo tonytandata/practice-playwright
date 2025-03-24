@@ -6,7 +6,7 @@ import org.tonyyjt.pages.HomePage;
 
 @Test
 public class CandyMapperTest extends TestBase{
-    public void verifyContactUsSubmission() {
+    public void verifyContactUsSubmission() throws InterruptedException {
         HomePage homePage = new HomePage();
         homePage.navigate();
         homePage.closePopup();
@@ -14,9 +14,10 @@ public class CandyMapperTest extends TestBase{
         homePage.scrollIntoViewSubmitButton();
         homePage.fillContactFormLabel("First Name", "Tony");
         homePage.fillContactFormLabel("Last Name", "Tester");
-        homePage.fillContactFormLabel("Email*", "tonytandata@gmail.com");
+        homePage.fillContactFormLabel("Email*", "tonytantech@gmail.com");
         homePage.fillContactFormLabel("By entering a Phone Number", "0451548884");
         homePage.fillContactFormMessage("Tonys test message to contact us form");
+        Thread.sleep(3000); //guessing it needs some time to disable validation
         homePage.clickSubmitContactForm();
 
         String expectedSuccessMessage = "Thank you for your inquiry! We will get back to you within 48 Years.";

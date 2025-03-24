@@ -27,16 +27,20 @@ public class HomePage extends AbstractPageBase {
     }
 
     public void fillContactFormLabel(String label, String text) {
-        page.getByLabel(label).scrollIntoViewIfNeeded();
+        page.getByLabel(label).hover();
+//        page.getByLabel(label).scrollIntoViewIfNeeded();
         page.getByLabel(label).fill(text);
     }
 
     public void fillContactFormMessage(String text) {
-        page.getByPlaceholder(CONTACT_FORM_MESSAGE_PLACEHOLDER).scrollIntoViewIfNeeded();
+//        page.getByPlaceholder(CONTACT_FORM_MESSAGE_PLACEHOLDER).scrollIntoViewIfNeeded();
+        page.getByPlaceholder(CONTACT_FORM_MESSAGE_PLACEHOLDER).hover();
         page.getByPlaceholder(CONTACT_FORM_MESSAGE_PLACEHOLDER).fill(text);
     }
 
     public void clickSubmitContactForm() {
+//        scrollIntoViewSubmitButton();
+        page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("submit")).hover();
         page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("submit")).click();
     }
 
