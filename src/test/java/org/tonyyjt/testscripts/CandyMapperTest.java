@@ -3,6 +3,7 @@ package org.tonyyjt.testscripts;
 import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
 import org.tonyyjt.pages.HomePage;
+import org.tonyyjt.pages.HomePage2;
 
 @Test
 public class CandyMapperTest extends TestBase{
@@ -23,5 +24,11 @@ public class CandyMapperTest extends TestBase{
         String expectedSuccessMessage = "Thank you for your inquiry! We will get back to you within 48 Years.";
         String actualSuccessMessage = homePage.getSuccessMessage();
         Assertions.assertThat(actualSuccessMessage).isEqualTo(expectedSuccessMessage);
+    }
+
+    public void verifyContactUsSubmission2(){
+        HomePage2 homePage2 = new HomePage2();
+        homePage2.navigate();
+        homePage2.closePopup();
     }
 }
