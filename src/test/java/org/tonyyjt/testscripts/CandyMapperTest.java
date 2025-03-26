@@ -26,9 +26,18 @@ public class CandyMapperTest extends TestBase{
         Assertions.assertThat(actualSuccessMessage).isEqualTo(expectedSuccessMessage);
     }
 
-    public void verifyContactUsSubmission2(){
+    public void verifyContactUsSubmission2() throws InterruptedException {
         HomePage2 homePage2 = new HomePage2();
         homePage2.navigate();
         homePage2.closePopup();
+
+        homePage2.scrollIntoViewSubmitButton();
+        homePage2.fillContactFormLabel("First Name", "Tony");
+        homePage2.fillContactFormLabel("Last Name", "Tester");
+        homePage2.fillContactFormLabel("Email *", "tonytantech@gmail.com");
+        homePage2.fillContactFormLabel("By entering a Phone Number", "0451548884");
+        homePage2.fillContactFormMessage("Tonys test message to contact us form");
+//        Thread.sleep(3000); //guessing it needs some time to disable validation
+        homePage2.clickSubmitContactForm();
     }
 }

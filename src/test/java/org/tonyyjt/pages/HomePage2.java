@@ -27,9 +27,9 @@ public class HomePage2 extends AbstractPageBase {
     }
 
     public void fillContactFormLabel(String label, String text) {
-        page.getByLabel(label).hover();
+        page.getByPlaceholder(label).hover();
 //        page.getByLabel(label).scrollIntoViewIfNeeded();
-        page.getByLabel(label).fill(text);
+        page.getByPlaceholder(label).fill(text);
     }
 
     public void fillContactFormMessage(String text) {
@@ -40,8 +40,8 @@ public class HomePage2 extends AbstractPageBase {
 
     public void clickSubmitContactForm() {
 //        scrollIntoViewSubmitButton();
-        page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("submit")).hover();
-        page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("submit")).click();
+        page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Submit")).hover();
+        page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Submit")).click();
     }
 
     public String getSuccessMessage() {
