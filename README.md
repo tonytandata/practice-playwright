@@ -1,5 +1,7 @@
 # practice-playwright
-Practicing against: https://candymapper.com/
+Practicing against: 
+- https://candymapper.com/
+- https://www.candymapper.net
 
 # Playwright, TestNG, Allure Reports Project
 
