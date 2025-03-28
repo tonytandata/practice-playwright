@@ -2,8 +2,8 @@ package org.tonyyjt.testscripts;
 
 import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
-import org.tonyyjt.pages.HomePage;
-import org.tonyyjt.pages.HomePage2;
+import org.tonyyjt.pages.candymapper.HomePage;
+import org.tonyyjt.pages.candymapper.HomePage2;
 
 @Test
 public class CandyMapperTest extends TestBase{

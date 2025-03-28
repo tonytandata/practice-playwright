@@ -1,35 +1,36 @@
-package org.tonyyjt.pages;
+package org.tonyyjt.pages.candymapper;
 
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.AriaRole;
-import io.qameta.allure.Step;
+import org.tonyyjt.pages.AbstractPageBase;
 import org.tonyyjt.properties.Environment;
+import io.qameta.allure.Step;
 import org.tonyyjt.testscripts.TestBase;
 
-public class HomePage2 extends AbstractPageBase {
+public class HomePage extends AbstractPageBase {
 
     private final static String CONTACT_FORM_MESSAGE_PLACEHOLDER = "Message";
     private final static String SUCCESS_TEXT = "Thank you for your inquiry!";
 
-    public HomePage2() {
+    public HomePage() {
         super(TestBase.getPage());
     }
 
     @Step("Open the Candy mapper homepage")
-    public HomePage2 navigate() {
-        page.navigate(Environment.getProperties().url2());
+    public HomePage navigate() {
+        page.navigate(Environment.getProperties().url());
         return this;
     }
 
     @Step("Closes popup")
     public void closePopup() {
-        page.getByLabel("Back to site").click();
+        page.locator("#popup-widget25042-close-icon").click();
     }
 
     public void fillContactFormLabel(String label, String text) {
-        page.getByPlaceholder(label).hover();
+        page.getByLabel(label).hover();
 //        page.getByLabel(label).scrollIntoViewIfNeeded();
-        page.getByPlaceholder(label).fill(text);
+        page.getByLabel(label).fill(text);
     }
 
     public void fillContactFormMessage(String text) {
@@ -40,8 +41,8 @@ public class HomePage2 extends AbstractPageBase {
 
     public void clickSubmitContactForm() {
 //        scrollIntoViewSubmitButton();
-        page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Submit")).hover();
-        page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Submit")).click();
+        page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("submit")).hover();
+        page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("submit")).click();
     }
 
     public String getSuccessMessage() {
